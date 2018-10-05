@@ -1,0 +1,21 @@
+.bg-color{
+    background-color: indianred ;
+}
+.navbar{
+    border-radius: 0px;
+    height:40px;
+    box-shadow:0px 2px 3px #000000;
+}
+li{
+    font-size: 17px;
+}
+.row{
+    width:100%;
+}
+.fcol{
+    color:whitesmoke;
+}
+.fa{
+    font-size: 14px;
+}
+

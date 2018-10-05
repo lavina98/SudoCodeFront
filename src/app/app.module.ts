@@ -14,6 +14,9 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateAttendanceComponent } from './update-attendance/update-attendance.component';
+import { TeacherNavComponent } from './teacher-nav/teacher-nav.component';
+import { ReferenceMaterialComponent } from './reference-material/reference-material.component';
+import { RegisterTeacherComponent } from './register-teacher/register-teacher.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import { UpdateAttendanceComponent } from './update-attendance/update-attendance
     NavComponent,
     CreateEventsComponent,
     NotificationsComponent,
-    UpdateAttendanceComponent
+    UpdateAttendanceComponent,
+    TeacherNavComponent,
+    ReferenceMaterialComponent,
+    RegisterTeacherComponent
   ],
   imports: [
     BrowserModule,

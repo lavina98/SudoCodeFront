@@ -1,0 +1,15 @@
+<form [formGroup]="refMaterial" (ngSubmit)="onSubmit()">
+  <label for="course">Enter course name</label>
+  <input type="text" formControlName="course">
+  <br>
+  <label for="topic">Enter topic name</label>
+  <input type="text" formControlName="topic">
+  <br>
+  <label for="desc">Enter Description</label>
+  <input type="text" formControlName="desc">
+  <br>
+  <label for="topic">Enter reference material link</label>
+  <input type="text" formControlName="link">
+  <br>
+  <button type="submit">Submit</button>
+</form>
