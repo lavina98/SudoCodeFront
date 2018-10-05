@@ -14,6 +14,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateAttendanceComponent } from './update-attendance/update-attendance.component';
+import { CalendarComponent } from './calendar/calendar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { UpdateAttendanceComponent } from './update-attendance/update-attendance
     NavComponent,
     CreateEventsComponent,
     NotificationsComponent,
-    UpdateAttendanceComponent
+    UpdateAttendanceComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
