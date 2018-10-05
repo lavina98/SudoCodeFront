@@ -1,27 +1,116 @@
 <app-entry-nav></app-entry-nav>
 
-<form [formGroup]="register" (ngSubmit)="onSubmit()">
-  <label for="fname">Enter First name</label>
-  <input type="text" formControlName="fname">
-  <br>
-  <label for="lname">Enter Last name</label>
-  <input type="text" formControlName="lname">
-  <br>
-  <label for="email">Enter Email id</label>
-  <input type="email" formControlName="email">
-  <br>
-  <label for="password">Enter Password</label>
-  <input type="password" formControlName="password">
-  <br>
-  <label for="dept">Enter Department Name</label>
-  <select formControlName="dept">
-    <option *ngFor="let dep of depart" [value]="dep">{{dep}}</option>
-  </select>
-  <br>
-  <label for="college">Enter College Name</label>
-  <select formControlName="college">
-    <option *ngFor="let c of coll" [value]="c">{{c}}</option>
-  </select>
-  <br>
-  <button type="submit">Submit</button>
-</form>
+<!--<form [formGroup]="register" (ngSubmit)="onSubmit()">-->
+  <!--<label for="fname">Enter First name</label>-->
+  <!--<input type="text" formControlName="fname">-->
+  <!--<br>-->
+  <!--<label for="lname">Enter Last name</label>-->
+  <!--<input type="text" formControlName="lname">-->
+  <!--<br>-->
+  <!--<label for="email">Enter Email id</label>-->
+  <!--<input type="email" formControlName="email">-->
+  <!--<br>-->
+  <!--<label for="password">Enter Password</label>-->
+  <!--<input type="password" formControlName="password">-->
+  <!--<br>-->
+  <!--<label for="dept">Enter Department Name</label>-->
+  <!--<select formControlName="dept">-->
+    <!--<option *ngFor="let dep of depart" [value]="dep">{{dep}}</option>-->
+  <!--</select>-->
+  <!--<br>-->
+  <!--<label for="college">Enter College Name</label>-->
+  <!--<select formControlName="college">-->
+    <!--<option *ngFor="let c of coll" [value]="c">{{c}}</option>-->
+  <!--</select>-->
+  <!--<br>-->
+  <!--<button type="submit">Submit</button>-->
+<!--</form>-->
+
+<!--fname lname email password dept D college D-->
+
+<div class="container-login100" style="background-image: url('../../assets/form/images/bg-01.jpg');">
+  <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+    <form [formGroup]="register" (ngSubmit)="onSubmit()">
+				<span class="login100-form-title p-b-37">
+					Teacher Register
+				</span>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="fname" placeholder="First name">
+        <span class="focus-input100"></span>
+      </div>
+      <div *ngIf="register.value.name ==='' && register.get('fname').touched === true">
+        <label><span style="color: red;text-align: center">*Name cannot be blank</span></label>
+      </div>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="lname" placeholder="Last name">
+        <span class="focus-input100"></span>
+      </div>
+      <div *ngIf="register.value.name ==='' && register.get('lname').touched === true">
+        <label><span style="color: red;text-align: center">*Surname cannot be blank</span></label>
+      </div>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="email" placeholder="Email">
+        <span class="focus-input100"></span>
+        <div *ngIf="register.value.email ==='' && register.get('email').touched === true">
+
+          <label><span style="color: red;text-align: center">*Email cannot be blank</span></label>
+        </div>
+      </div>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="password" placeholder="Password">
+        <span class="focus-input100"></span>
+        <div *ngIf="register.value.password ==='' && register.get('password').touched === true">
+
+          <label><span style="color: red;text-align: center">*Password cannot be blank</span></label>
+        </div>
+      </div>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <div class="row">
+          <div class="container-fluid">
+          <input class="input100 col-6" type="text" formControlName="college" placeholder="College" disabled>
+          <select formControlName="college" class="col-6">
+            <option *ngFor="let c of coll" [value]="c">{{c}}</option>
+          </select>
+        </div>
+        </div>
+        <div *ngIf="register.value.college ==='' && register.get('college').touched === true">
+
+          <label><span style="color: red;text-align: center">*College cannot be blank</span></label>
+        </div>
+        <span class="focus-input100"></span>
+      </div>
+
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <div class="row">
+          <div class="container-fluid">
+            <input class="input100 col-6" type="text" formControlName="dept" placeholder="Department" disabled>
+            <select formControlName="dept" class="col-6">
+              <option *ngFor="let dep of depart" [value]="dep">{{dep}}</option>
+            </select>
+          </div>
+        </div>
+        <div *ngIf="register.value.college ==='' && register.get('college').touched === true">
+
+          <label><span style="color: red;text-align: center">*Department cannot be blank</span></label>
+        </div>
+        <span class="focus-input100"></span>
+      </div>
+
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit">
+          Register
+        </button>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>

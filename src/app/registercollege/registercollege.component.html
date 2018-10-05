@@ -1,23 +1,79 @@
 <app-entry-nav></app-entry-nav>
-<br>
-<br>
-<br>
 
-<form [formGroup]="registerCollege" (ngSubmit)="onSubmit()">
-    <label for="name">Enter College name</label>
-    <input type="text" formControlName="name">
-    <br>
-    <label for="link">Enter College Link</label>
-    <input type="text" formControlName="link">
-    <br>
-    <div>
-        <button type="button" (click)="add()">Add a new Link</button>
-    </div>
-    <div formArrayName="addon">
-      <div *ngFor=" let item of registerCollege.get('addon').controls ; let i=index">
-        <label> Add the new link addr</label>
-        <input type="text" [formControlName]="i">
+<!--   college link   -->
+
+<!--<form [formGroup]="registerCollege" (ngSubmit)="onSubmit()">-->
+    <!--<label for="name">Enter College name</label>-->
+    <!--<input type="text" formControlName="name">-->
+    <!--<br>-->
+    <!--<label for="link">Enter College Link</label>-->
+    <!--<input type="text" formControlName="link">-->
+    <!--<br>-->
+    <!--<div>-->
+        <!--<button type="button" (click)="add()">Add a new Link</button>-->
+    <!--</div>-->
+    <!--<div formArrayName="addon">-->
+      <!--<div *ngFor=" let item of registerCollege.get('addon').controls ; let i=index">-->
+        <!--<label> Add the new link addr</label>-->
+        <!--<input type="text" [formControlName]="i">-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<button type="submit">Submit Form</button>-->
+<!--</form>-->
+
+
+<div class="container-login100" style="background-image: url('../../assets/form/images/bg-01.jpg');">
+  <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+    <form [formGroup]="registerCollege" (ngSubmit)="onSubmit()">
+				<span class="login100-form-title p-b-37">
+					College Register
+				</span>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="name" placeholder="College name">
+        <span class="focus-input100"></span>
       </div>
-    </div>
-    <button type="submit">Submit Form</button>
-</form>
+      <div *ngIf="registerCollege.value.name ==='' && registerCollege.get('name').touched === true">
+        <label><span style="color: red;text-align: center">*Name cannot be blank</span></label>
+      </div>
+
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="link" placeholder="Website link">
+        <span class="focus-input100"></span>
+      </div>
+      <div *ngIf="registerCollege.value.name ==='' && registerCollege.get('link').touched === true">
+        <label><span style="color: red;text-align: center">*College website cannot be blank</span></label>
+      </div>
+
+      <div  class="wrap-input100 validate-input m-b-20">
+        <button type="button" (click)="add()">Add extra link</button>
+      </div>
+
+      <div formArrayName="addon">
+        <div *ngFor=" let item of registerCollege.get('addon').controls ; let i=index">
+
+
+          <div class="wrap-input100 validate-input m-b-20">
+            <input class="input100" type="text" [formControlName]="i" placeholder="Website link">
+            <span class="focus-input100"></span>
+          </div>
+          <!--<div *ngIf="registerCollege.value.name ==='' && registerCollege.get('i').touched === true">-->
+            <!--<label><span style="color: red;text-align: center">*College website cannot be blank</span></label>-->
+          <!--</div>-->
+
+        </div>
+      </div>
+
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit">
+          Register
+        </button>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
