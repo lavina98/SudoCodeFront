@@ -1,3 +1,4 @@
+import { RefMaterialService } from './services/refmaterial.service';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,12 +13,21 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreateEventsComponent } from './create-events/create-events.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { AuthService } from './services/auth.service';
+import {HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateAttendanceComponent } from './update-attendance/update-attendance.component';
 import { TeacherNavComponent } from './teacher-nav/teacher-nav.component';
 import { ReferenceMaterialComponent } from './reference-material/reference-material.component';
 import { RegisterTeacherComponent } from './register-teacher/register-teacher.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+// import { CalendarMonthViewComponent } from './calendar-month-view/calendar-month-view.component';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CalendarHeaderComponent } from './calendar-header/calendar-header.component';
+import { EventsService } from './services/events.sevice';
+import { AttendanceService } from './services/attendance.service';
+import { EntryNavComponent } from './entry-nav/entry-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +41,10 @@ import { CalendarComponent } from './calendar/calendar.component';
     TeacherNavComponent,
     ReferenceMaterialComponent,
     RegisterTeacherComponent,
-    CalendarComponent
+    CalendarComponent,
+    // CalendarMonthViewComponent,
+    CalendarHeaderComponent,
+    EntryNavComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +52,19 @@ import { CalendarComponent } from './calendar/calendar.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModalModule
+    NgbModalModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
+    FlatpickrModule.forRoot(),
+    HttpModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    EventsService,
+    AttendanceService,
+    RefMaterialService
   ],
   bootstrap: [AppComponent]
 })

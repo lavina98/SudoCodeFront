@@ -1,12 +1,12 @@
 <form [formGroup]="events" (ngSubmit)="onSubmit()">
 
-    <label for="name">Enter name </label>
+    <label for="name">Enter name: </label>
     <input formControlName="name" type="text">
     <br>
-    <label for="desc">Enter Description</label>
+    <label for="desc">Enter Description:</label>
     <input formControlName="desc" type="text">
     <br>
-    <label for="date">Enter Date</label>
+    <label for="date">Enter Date: </label>
     <input type="date" formControlName="date">
   <button type="submit">Submit</button>
   </form>
