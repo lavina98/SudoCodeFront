@@ -1,0 +1,16 @@
+
+<form [formGroup]="attendance" (ngSubmit)="onSubmit()">
+    <label for="lecname">Enter Course name</label>
+    <input type="text" formControlName="lecname">
+    <br>
+    <div>
+        <button type="button" (click)="add()">Add absent Students email:</button>
+    </div>
+    <div formArrayName="students">
+      <div *ngFor=" let item of attendance.get('students').controls ; let i=index">
+        <label> Add the student email</label>
+        <input type="email" [formControlName]="i">
+      </div>
+    </div>
+    <button type="submit">Submit Form</button>
+</form>

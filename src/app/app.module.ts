@@ -10,6 +10,10 @@ import { RegistercollegeComponent } from './registercollege/registercollege.comp
 import { NavComponent } from './nav/nav.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreateEventsComponent } from './create-events/create-events.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { UpdateAttendanceComponent } from './update-attendance/update-attendance.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,16 +21,21 @@ import { CreateEventsComponent } from './create-events/create-events.component';
     LoginComponent,
     RegistercollegeComponent,
     NavComponent,
-    CreateEventsComponent
+    CreateEventsComponent,
+    NotificationsComponent,
+    UpdateAttendanceComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModalModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
