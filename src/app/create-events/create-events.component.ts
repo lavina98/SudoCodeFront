@@ -33,7 +33,7 @@ export class CreateEventsComponent implements OnInit {
           end_year: arr [0]};
         console.log(val);
         this.eventsService.createEvent(val).subscribe(
-          (data) => console.log(data)
+          (data: any) => console.log(data)
         );
     }
   }

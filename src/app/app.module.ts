@@ -1,3 +1,4 @@
+import { RefMaterialService } from './services/refmaterial.service';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -25,6 +26,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { CalendarHeaderComponent } from './calendar-header/calendar-header.component';
 import { EventsService } from './services/events.sevice';
+import { AttendanceService } from './services/attendance.service';
+import { EntryNavComponent } from './entry-nav/entry-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,8 @@ import { EventsService } from './services/events.sevice';
     RegisterTeacherComponent,
     CalendarComponent,
     // CalendarMonthViewComponent,
-    CalendarHeaderComponent
+    CalendarHeaderComponent,
+    EntryNavComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,9 @@ import { EventsService } from './services/events.sevice';
   ],
   providers: [
     AuthService,
-    EventsService
+    EventsService,
+    AttendanceService,
+    RefMaterialService
   ],
   bootstrap: [AppComponent]
 })
