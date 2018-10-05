@@ -18,4 +18,7 @@ export class CreateEventsComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    console.log(this.events);
+  }
 }
