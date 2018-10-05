@@ -1,0 +1,19 @@
+
+<form [formGroup]="registerCollege" (ngSubmit)="onSubmit()">
+    <label for="name">Enter College name</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label for="link">Enter College Link</label>
+    <input type="text" formControlName="link">
+    <br>
+    <div>
+        <button type="button" (click)="add()">Add a new Link</button>
+    </div>
+    <div formArrayName="addon">
+      <div *ngFor=" let item of registerCollege.get('addon').controls ; let i=index">
+        <label> Add the new link addr</label>
+        <input type="text" [formControlName]="i">
+      </div>
+    </div>
+    <button type="submit">Submit Form</button>
+</form>

@@ -1,0 +1,24 @@
+<form [formGroup]="register" (ngSubmit)="onSubmit()">
+
+  <label for="name">Enter name </label>
+    <input formControlName="name" type="text">
+    <br>
+  <label for="college">Enter college:</label>
+  <select formControlName="college" >
+    <option *ngFor="let item of coll" [value]="item"> {{item}}</option>
+  </select>
+  <br>
+  <label for="email">Enter email:</label>
+    <input formControlName="email" type="email">
+    <br>
+  <label for="password"> Enter password:</label>
+    <input formControlName="password" type="password">
+    <br>
+  <label for="dept"> Enter Dept </label>
+    <input formControlName="dept" type="text">
+    <br>
+  <label for="year">Enter grad year</label>
+    <input formControlName="year" type="number">
+    <br>
+<button type="submit">Submit</button>
+</form>
