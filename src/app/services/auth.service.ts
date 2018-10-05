@@ -8,8 +8,13 @@ export class AuthService {
     constructor(private http: HttpClient) {
 
     }
-    verifyUser(udata: any): Observable<any> {
+    registerUser(udata: any): Observable<any> {
        return  this.http.post('https://localhost:3500/users/student-register', udata).pipe(map(
            (response: any) => console.log(response)));
     }
+    loginUser(udata: any): Observable<any> {
+        return this.http.post('', udata).pipe(map(
+            (res: any) => console.log(res)));
+    }
+
 }

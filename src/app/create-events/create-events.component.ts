@@ -1,3 +1,4 @@
+import { EventsService } from './../services/events.sevice';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
@@ -8,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class CreateEventsComponent implements OnInit {
 
   events: FormGroup;
-  constructor() { }
+  constructor(private eventsService: EventsService) { }
 
   ngOnInit() {
     this.events = new FormGroup({
@@ -20,5 +21,20 @@ export class CreateEventsComponent implements OnInit {
 
   onSubmit() {
     console.log(this.events);
+    const arr = this.events.value.date.split('-');
+    if (this.events.valid) {
+        const val = {name: this.events.value.name ,
+          description: this.events.value.desc,
+          start_day: 0,
+          start_month: 0,
+          start_year: 0,
+          end_day: arr[2],
+          end_month: arr[1],
+          end_year: arr [0]};
+        console.log(val);
+        this.eventsService.createEvent(val).subscribe(
+          (data) => console.log(data)
+        );
+    }
   }
 }
