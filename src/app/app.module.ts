@@ -1,3 +1,4 @@
+import { NotificationsService } from './services/notifications.service';
 import { RefMaterialService } from './services/refmaterial.service';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
@@ -64,7 +65,8 @@ import { EntryNavComponent } from './entry-nav/entry-nav.component';
     AuthService,
     EventsService,
     AttendanceService,
-    RefMaterialService
+    RefMaterialService,
+    NotificationsService
   ],
   bootstrap: [AppComponent]
 })
