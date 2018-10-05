@@ -17,6 +17,7 @@ import { UpdateAttendanceComponent } from './update-attendance/update-attendance
 import { TeacherNavComponent } from './teacher-nav/teacher-nav.component';
 import { ReferenceMaterialComponent } from './reference-material/reference-material.component';
 import { RegisterTeacherComponent } from './register-teacher/register-teacher.component';
+import { CalendarComponent } from './calendar/calendar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { RegisterTeacherComponent } from './register-teacher/register-teacher.co
     UpdateAttendanceComponent,
     TeacherNavComponent,
     ReferenceMaterialComponent,
-    RegisterTeacherComponent
+    RegisterTeacherComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

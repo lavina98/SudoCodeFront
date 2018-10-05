@@ -1,44 +1,95 @@
-<form [formGroup]="register" (ngSubmit)="onSubmit()">
 
-  <label for="name">Enter name </label>
-    <input formControlName="name" type="text">
-    <div *ngIf="register.value.name ==='' && register.get('name').touched === true">
-      <label>Name cannot be blank</label>
-    </div>
-    <br>
-  <label for="college">Enter college:</label>
-  <select formControlName="college" >
-    <option *ngFor="let item of coll" [value]="item"> {{item}}</option>
-  </select>
-  <div *ngIf="register.value.college ==='' && register.get('college').touched === true">
-      <label>College Name cannot be blank</label>
-    </div>
-  <br>
-  <label for="email">Enter email:</label>
-    <input formControlName="email" type="email">
-    <br>
-    <div *ngIf="register.value.email ==='' && register.get('email').touched === true">
-        <label>Email cannot be blank</label>
+<div class="container-login100" style="background-image: url('../../assets/form/images/bg-01.jpg');">
+  <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+    <form class="login100-form validate-form" [formGroup]="register" (ngSubmit)="onSubmit()">
+				<span class="login100-form-title p-b-37">
+					Student Register
+				</span>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="name" placeholder="Enter name">
+        <span class="focus-input100"></span>
       </div>
-  <label for="password"> Enter password:</label>
-    <input formControlName="password" type="password">
-    <br>
-    <div *ngIf="register.value.password ==='' && register.get('password').touched === true">
-        <label>Password cannot be blank</label>
+      <div *ngIf="register.value.name ==='' && register.get('name').touched === true">
+          <label>Name cannot be blank</label>
       </div>
-    <label for="dept">Enter college:</label>
-    <select formControlName="dept" >
-      <option *ngFor="let item of depart" [value]="item"> {{item}}</option>
-    </select>
-    <div *ngIf="register.value.dept ==='' && register.get('dept').touched === true">
-        <label>Department Name cannot be blank</label>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <div class="row"><div class="container-fluid">
+          <input class="input100 col-6" type="text" formControlName="college" placeholder="Enter college" disabled>
+          <select formControlName="college" class="col-6">
+            <option *ngFor="let item of coll" [value]="item"> {{item}}</option>
+          </select>
+        </div>
+        </div>
+        <div *ngIf="register.value.college ==='' && register.get('college').touched === true">
+            <label>College Name cannot be blank</label>
+          </div>
+        <span class="focus-input100"></span>
+
       </div>
-    <br>
-  <label for="year">Enter grad year</label>
-    <input formControlName="year" type="number">
-    <br>
-    <div *ngIf="register.value.year ==='' && register.get('year').touched === true">
-        <label>Year cannot be blank</label>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="email" placeholder="Enter email">
+        <span class="focus-input100"></span>
+        <div *ngIf="register.value.email ==='' && register.get('email').touched === true">
+            <label>Email cannot be blank</label>
+          </div>
       </div>
-<button type="submit">Submit</button>
-</form>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="password" placeholder="Enter password">
+        <span class="focus-input100"></span>
+        <div *ngIf="register.value.password ==='' && register.get('password').touched === true">
+            <label>Password cannot be blank</label>
+          </div>
+      </div>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="dept" placeholder="Enter department">
+        <span class="focus-input100"></span>
+        <div *ngIf="register.value.dept ==='' && register.get('dept').touched === true">
+            <label>Department Name cannot be blank</label>
+          </div>
+      </div>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="text" formControlName="year" placeholder="Enter year">
+        <div *ngIf="register.value.year ==='' && register.get('year').touched === true">
+            <label>Year cannot be blank</label>
+        </div>
+        <span class="focus-input100"></span>
+      </div>
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit">
+          Register
+        </button>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script src="../../assets/form/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="../../assets/form/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="../../assets/form/vendor/bootstrap/js/popper.js"></script>
+<script src="../../assets/form/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="../../assets/form/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="../../assets/form/vendor/daterangepicker/moment.min.js"></script>
+<script src="../../assets/form/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="../../assets/form/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="../../assets/form/js/main.js"></script>
