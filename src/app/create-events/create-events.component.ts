@@ -35,7 +35,7 @@ export class CreateEventsComponent implements OnInit {
         };
         console.log(val);
         this.eventsService.createEvent(val).subscribe(
-          (data) => console.log(data)
+          (data: any) => console.log(data)
         );
     }
   }

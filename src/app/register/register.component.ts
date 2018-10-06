@@ -15,20 +15,23 @@ export class RegisterComponent implements OnInit {
   depart: string[] = ['COMPS', 'IT', 'ETRX', 'EXTC' ];
   ngOnInit() {
     this.register = new FormGroup({
-      name: new FormControl('', Validators.compose([Validators.required])),
-      college: new FormControl('', Validators.compose([Validators.required])),
+      fname: new FormControl('', Validators.compose([Validators.required])),
+      lname: new FormControl('', Validators.compose([Validators.required])),
+      collegeid: new FormControl('', Validators.compose([Validators.required])),
       email: new FormControl('', Validators.compose([Validators.required, Validators.required])),
       password: new FormControl('', Validators.compose([Validators.required])),
-      dept: new FormControl('', Validators.compose([Validators.required])),
-      year: new FormControl('', Validators.compose([Validators.required]))
+      deptartmentid: new FormControl('', Validators.compose([Validators.required])),
+      start_year: new FormControl('', Validators.compose([Validators.required]))
     });
   }
 
   onSubmit() {
     console.log(this.register);
-    this.authService.registerUser(this.register.value).subscribe(
+    if (this.register.valid) {
+    this.authService.registerStudent(this.register.value).subscribe(
       (data) => console.log(data)
     );
+    }
   }
 
 }

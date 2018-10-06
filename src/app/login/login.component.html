@@ -1,13 +1,53 @@
+<app-entry-nav></app-entry-nav>
+
+<!--<div class="container">-->
+<!--<form [formGroup]="login" (ngSubmit)="onSubmit()">-->
+  <!--<label for="email"> Enter Email -id </label>-->
+  <!--<input formControlName="email" type="email">-->
+  <!--<br>-->
+  <!--<label for="password">Enter Password:</label>-->
+  <!--<input formControlName="password" type="text">-->
+  <!--<br>-->
+  <!--<button type="submit">Submit</button>-->
+<!--</form>-->
+<!--</div>-->
+
+<!--  email password submit   -->
 
 
-<div class="container">
-<form [formGroup]="login" (ngSubmit)="onSubmit()">
-  <label for="email"> Enter Email -id </label>
-  <input formControlName="email" type="email">
-  <br>
-  <label for="password">Enter Password:</label>
-  <input formControlName="password" type="text">
-  <br>
-  <button type="submit">Submit</button>
-</form>
+<div class="container-login100" style="background-image: url('../../assets/form/images/bg-01.jpg');">
+  <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+				<span class="login100-form-title p-b-37">
+					Log In
+				</span>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="email" formControlName="email" placeholder="Email ID">
+        <span class="focus-input100"></span>
+      </div>
+      <div *ngIf="login.value.name ==='' && login.get('email').touched === true">
+        <label><span style="color: red;text-align: center">*Email cannot be blank</span></label>
+      </div>
+
+      <div class="wrap-input100 validate-input m-b-20">
+        <input class="input100" type="password" formControlName="password" placeholder="Password">
+        <span class="focus-input100"></span>
+      </div>
+      <div *ngIf="login.value.name ==='' && login.get('password').touched === true">
+        <label><span style="color: red;text-align: center">*Password cannot be blank</span></label>
+      </div>
+
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit">
+          Login
+        </button>
+      </div>
+
+    </form>
+
+
+  </div>
 </div>
+

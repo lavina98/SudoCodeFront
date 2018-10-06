@@ -1,3 +1,13 @@
-<p>
-  notifications works!
-</p>
+Github Details :
+<p>Followers :{{gitDetails?.result.Followers}}</p>
+<p>Following :{{gitDetails?.result.Following}}</p>
+<p>Overview :{{gitDetails?.result.Overview}}</p>
+<p>Repositories :{{gitDetails?.result.Repositories}}</p>
+<p>Stars :{{gitDetails?.result.Stars}}</p>
+
+Internship Details:
+<div *ngFor="let item of internDetails">
+    <label>{{item.name}} :</label>
+    <label>{{item.link}}</label>
+    <br>
+</div>
