@@ -1,6 +1,7 @@
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent implements OnInit {
 
   login: FormGroup;
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private route: Router) { }
 
   ngOnInit() {
     this.login = new FormGroup({
@@ -25,6 +26,15 @@ export class LoginComponent implements OnInit {
       this.authService.loginUser(this.login.value).subscribe(
         (data) => {
           console.log(data);
+          if (data === 'student') {
+            this.route.navigate(['/student/notification']);
+          } else if (data === 'teacher') {
+            this.route.navigate(['/teacher/attendance']);
+          } else if (data === 'Invalid') {
+              alert('Incorrent password');
+          } else {
+            alert('Invaild Username. Account Doesnt exist');
+          }
         }
       );
     }
