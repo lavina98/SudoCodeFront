@@ -39,5 +39,13 @@ export class AuthService {
                  return res;
                 }));
     }
+    logout(): Observable<any> {
+        return this.http.get('http://localhost:3500/users/logout', {withCredentials: true}).pipe(map(
+            (res: any) => {
+                console.log(res);
+                return res;
+            }
+        ));
+    }
 
 }
