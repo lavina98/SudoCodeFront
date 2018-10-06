@@ -21,7 +21,9 @@ export class ProfileComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.linkForm);
-    this.profileService.addLinks(this.linkForm.value);
+    this.profileService.addLinks(this.linkForm.value).subscribe(
+    (data) => console.log(data)
+    );
   }
 
 }
