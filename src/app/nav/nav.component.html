@@ -20,28 +20,57 @@
     <!--</div>-->
   <!--</nav>-->
 
-  <nav id="sidebar">
-    <div class="sidebar-header">
-      <h3>Student Dashboard</h3>
+  <!--<nav id="sidebar">-->
+    <!--<div class="sidebar-header">-->
+      <!--<h3>Student Dashboard</h3>-->
+    <!--</div>-->
+
+    <!--<ul class="list-unstyled components" style="color: white">-->
+      <!--<p>Welcome Pusheen</p>-->
+      <!--<li class="nav-item " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">-->
+        <!--<a href="#" class="nav-link" routerLink=''>Dashboard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item" routerLinkActive="active">-->
+        <!--<a class="nav-link" routerLink='' ><i class="fa fa-folder-open"></i>&nbsp;Attendance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item" routerLinkActive="active">-->
+        <!--<a class="nav-link" routerLink='' ><i class="fa fa-folder-open"></i>&nbsp;Profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item" routerLinkActive="active">-->
+        <!--<a class="nav-link" routerLink=''><i class="fa fa-inr"></i>&nbsp;Calender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item" routerLinkActive="active">-->
+        <!--<a class="nav-link" routerLink=''><i class="fa fa-inr"></i>&nbsp;Notification&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+
+  <!--</nav>-->
+
+<!-- Tabs -->
+<section id="tabs">
+  <div class="container">
+    <h6 class="section-title h1">Students Dashboard</h6>
+    <div class="row" style="padding-left: 24%">
+      <div class="col-xs-12 ">
+        <nav>
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-home"
+               aria-selected="true" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink='/update-attendance'>
+              Update Profile
+            </a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile"
+               aria-selected="false">
+              Attendance
+            </a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">
+              Calendar
+            </a>
+            <a class="nav-item nav-link" id="nav-notif-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">
+              Notifications
+            </a>
+            </div>
+        </nav>
+      </div>
     </div>
-
-    <ul class="list-unstyled components" style="color: white">
-      <p>Welcome Pusheen</p>
-      <li class="nav-item " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <a href="#" class="nav-link" routerLink=''>Dashboard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink='' ><i class="fa fa-folder-open"></i>&nbsp;Attendance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink='' ><i class="fa fa-folder-open"></i>&nbsp;Profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink=''><i class="fa fa-inr"></i>&nbsp;Calender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink=''><i class="fa fa-inr"></i>&nbsp;Notification&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      </li>
-    </ul>
-
-  </nav>
+  </div>
+</section>
