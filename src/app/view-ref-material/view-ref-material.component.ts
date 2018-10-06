@@ -12,8 +12,11 @@ export class ViewRefMaterialComponent implements OnInit {
   constructor(private refMaterialService: RefMaterialService) { }
 
   ngOnInit() {
-    this. refMaterial = this.refMaterialService.viewRefMaterial().subscribe(
-      (data) => console.log(data)
+     this.refMaterialService.viewRefMaterial().subscribe(
+      (data) => {
+        console.log(data);
+        this.refMaterial = data;
+      }
     );
   }
 
