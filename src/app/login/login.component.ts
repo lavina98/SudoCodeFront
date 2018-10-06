@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         (data) => {
           console.log(data);
           if (data === 'student') {
-            this.route.navigate(['/student/notification']);
+            this.route.navigate(['/student/attendance']);
           } else if (data === 'teacher') {
             this.route.navigate(['/teacher/attendance']);
           } else if (data === 'Invalid') {
