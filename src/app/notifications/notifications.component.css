@@ -15,16 +15,22 @@ section {
   margin:  0.25rem;
   padding:  1rem;
   width:  100%;
-  background-color: #ff8e6c;
+  /* background-color: #ff8e6c; */
   border: 10px #5078af;
 }
-
-section:nth-child(3n){
+div {
+  margin:  0.5rem;
+  padding:  1rem;
+  width:  100%;
+  border: 10px #5078af;
+  background-color: #ff8e6c;
+}
+div:nth-child(3n){
 
   background-color: #ffc96b;
   border: 10px #5078af;
 }
-section:nth-child(2n){
+div:nth-child(2n){
   background-color: #ffdb96;;
   border: 10px #5078af;
 }
