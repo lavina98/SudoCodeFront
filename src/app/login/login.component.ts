@@ -20,8 +20,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.login.value);
     if (this.login.valid) {
-      this.authService.loginUser(this.login).subscribe(
+      this.authService.loginUser(this.login.value).subscribe(
         (data) => {
           console.log(data);
         }
