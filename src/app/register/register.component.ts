@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
       collegeid: new FormControl('', Validators.compose([Validators.required])),
       email: new FormControl('', Validators.compose([Validators.required, Validators.required])),
       password: new FormControl('', Validators.compose([Validators.required])),
-      deptartmentid: new FormControl('', Validators.compose([Validators.required])),
+      departmentid: new FormControl('', Validators.compose([Validators.required])),
       start_year: new FormControl('', Validators.compose([Validators.required]))
     });
   }
