@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { RefMaterialService } from '../services/refmaterial.service';
 
 @Component({
   selector: 'app-reference-material',
@@ -9,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ReferenceMaterialComponent implements OnInit {
 
   refMaterial: FormGroup ;
-  constructor() { }
+  constructor(private refematerialService: RefMaterialService) { }
 
   ngOnInit() {
     this.refMaterial = new FormGroup({
@@ -21,6 +22,13 @@ export class ReferenceMaterialComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.refMaterial);
+    if (this.refMaterial.valid) {
+      this.refematerialService.addRef(this.refMaterial.value).subscribe(
+        (data) => {
+          console.log(data);
+        }
+      );
+    }
   }
 
 }
