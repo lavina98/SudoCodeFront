@@ -11,7 +11,7 @@ export class AttendanceService {
 
     updateAttendance(data: any): Observable<any> {
         const val = this.url + 'teacher/lecture';
-        return  this.http.post(val, data).pipe(map(
+        return  this.http.post(val, data, {withCredentials: true}).pipe(map(
             (response: any) => {
                 console.log(response);
                 return response;
@@ -19,7 +19,7 @@ export class AttendanceService {
      }
      getAttendance(): Observable<any> {
         const val = this.url + 'teacher/attendance';
-        return this.http.get(val).pipe(map(
+        return this.http.get(val, {withCredentials: true}).pipe(map(
             (response) => {
                 console.log(response);
                 return response;

@@ -10,7 +10,7 @@ export class NotificationsService {
     }
     getStudentGitDetails(data: any): Observable<any> {
         const val = 'http://localhost:3500/scraping/github/' + data;
-        return this.http.get(val).pipe(map(
+        return this.http.get(val, {withCredentials: true}).pipe(map(
             (res: any) => {
                 console.log(res);
                 return res;
@@ -19,7 +19,7 @@ export class NotificationsService {
 
     }
     getInternshipDetails(): Observable<any> {
-        return this.http.get('http://localhost:3500/scraping/linkedin').pipe(map(
+        return this.http.get('http://localhost:3500/scraping/linkedin', {withCredentials: true}).pipe(map(
             (data) => {
                 console.log(data);
                 return data;
@@ -28,7 +28,7 @@ export class NotificationsService {
     }
 
     getHackathonDetails(): Observable<any> {
-        return this.http.get('http://localhost:3500/scraping/hackathons').pipe(map(
+        return this.http.get('http://localhost:3500/scraping/hackathons' , {withCredentials: true}).pipe(map(
             (data) => {
                 console.log(data);
                 return data;
