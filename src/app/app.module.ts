@@ -31,6 +31,7 @@ import { AttendanceService } from './services/attendance.service';
 import { EntryNavComponent } from './entry-nav/entry-nav.component';
 import { GetAttendanceComponent } from './get-attendance/get-attendance.component';
 import { GetEventsComponent } from './get-events/get-events.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { GetEventsComponent } from './get-events/get-events.component';
     CalendarHeaderComponent,
     EntryNavComponent,
     GetAttendanceComponent,
-    GetEventsComponent
+    GetEventsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
