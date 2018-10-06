@@ -10,8 +10,10 @@ import { RegistercollegeComponent } from './registercollege/registercollege.comp
 import { ReferenceMaterialComponent } from './reference-material/reference-material.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { GetAttendanceComponent } from './get-attendance/get-attendance.component';
+import {CalendarComponent} from './calendar/calendar.component';
 const approutes: Routes = [
-    {path: '', component: LoginComponent},
+    // {path: '', component: LoginComponent},
+    {path: '', component: CalendarComponent},
     {path: 'register/student', component: RegisterComponent},
     {path: 'register/teacher', component: RegisterTeacherComponent},
     {path: 'register/college', component: RegistercollegeComponent},
