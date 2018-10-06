@@ -39,8 +39,32 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <!-- Tabs -->
+<style>
+  .default {
+  border-color: #e7e7e7;
+  /*color: black;*/
+  }
+  .btn {
+    /*border: 2px solid black;*/
+    border-radius: 5px;
+    /*background-color: white;*/
+    /*color: black;*/
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .default:hover {
+  background: #e7e7e7;
+  }
+</style>
 <section id="tabs">
   <div class="container">
+    <div align="right">
+      <br>
+    <button (click)="logout()" class="btn default">
+      <span style="font-size: 15px;color: white;font-weight:bold">LOGOUT</span>
+    </button>
+    </div>
     <h6 class="section-title h1">Teachers Dashboard</h6>
     <div class="row" style="padding-left: 24%">
       <div class="col-xs-12 ">
@@ -58,7 +82,6 @@
              aria-selected="false" routerLink='/teacher/referencematerial' routerLinkActive="active">
               Reference Material
             </a>
-            <button type="button" (click)="logout()">Logout</button>
           </div>
         </nav>
 
