@@ -8,8 +8,8 @@ export class NotificationsService {
     constructor(private http: HttpClient) {
 
     }
-    getStudentGitDetails(data: any): Observable<any> {
-        const val = 'http://localhost:3500/scraping/github/' + data;
+    getStudentGitDetails(): Observable<any> {
+        const val = 'http://localhost:3500/scraping/github';
         return this.http.get(val, {withCredentials: true}).pipe(map(
             (res: any) => {
                 console.log(res);
