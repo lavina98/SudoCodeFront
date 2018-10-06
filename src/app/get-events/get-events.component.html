@@ -6,23 +6,22 @@
 <br>
 <div *ngFor="let item of eventsArr">
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label>Course: {{item.course}}</label>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label> Date: {{item.end_day}}-{{item.end_month}}-{{item.end_year}}</label>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-2">
       <label>Teacher: {{item.teacher}}</label>
     </div> 
-</div>
-<div class="row">
-    <div class="col-md-4">
+    <div class="col-md-2">
       <label>Name: {{item.name}}</label>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-2">
       <label>Desc: {{item.description}}</label>
     </div>
+    <hr>
 </div>
 </div>
 
