@@ -33,6 +33,7 @@ import { EntryNavComponent } from './entry-nav/entry-nav.component';
 import { GetAttendanceComponent } from './get-attendance/get-attendance.component';
 import { GetEventsComponent } from './get-events/get-events.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ViewRefMaterialComponent } from './view-ref-material/view-ref-material.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { ProfileComponent } from './profile/profile.component';
     EntryNavComponent,
     GetAttendanceComponent,
     GetEventsComponent,
-    ProfileComponent
+    ProfileComponent,
+    ViewRefMaterialComponent
   ],
   imports: [
     BrowserModule,

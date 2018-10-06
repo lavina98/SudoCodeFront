@@ -17,5 +17,15 @@ export class RefMaterialService {
             }));
      }
 
+     viewRefMaterial(): Observable<any> {
+        let val = 'http://localhost:3500/teacher/reference';
+        val += '?course=Data Structures' ;
+        return  this.http.get(val, {withCredentials: true}).pipe(map(
+            (response: any) => {
+                console.log(response);
+                return response;
+            }));
+     }
+
 
 }

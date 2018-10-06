@@ -1,3 +1,4 @@
+import { ViewRefMaterialComponent } from './view-ref-material/view-ref-material.component';
 import { GetEventsComponent } from './get-events/get-events.component';
 import { CreateEventsComponent } from './create-events/create-events.component';
 import { UpdateAttendanceComponent } from './update-attendance/update-attendance.component';
@@ -25,6 +26,7 @@ const approutes: Routes = [
     {path: 'student/attendance', component: GetAttendanceComponent},
     {path: 'student/events', component: GetEventsComponent},
     {path: 'student/profile', component: ProfileComponent},
+    {path: 'student/refmaterial', component: ViewRefMaterialComponent}
 ];
 @NgModule({
 
