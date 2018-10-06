@@ -1,3 +1,4 @@
+import { ProfileService } from './services/profile.service';
 import { NotificationsService } from './services/notifications.service';
 import { RefMaterialService } from './services/refmaterial.service';
 import { AppRoutingModule } from './app.routing';
@@ -72,7 +73,8 @@ import { ProfileComponent } from './profile/profile.component';
     EventsService,
     AttendanceService,
     RefMaterialService,
-    NotificationsService
+    NotificationsService,
+    ProfileService
   ],
   bootstrap: [AppComponent]
 })
