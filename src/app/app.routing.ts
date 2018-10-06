@@ -11,7 +11,9 @@ import { ReferenceMaterialComponent } from './reference-material/reference-mater
 import { NotificationsComponent } from './notifications/notifications.component';
 import { GetAttendanceComponent } from './get-attendance/get-attendance.component';
 import { ProfileComponent } from './profile/profile.component';
+import {CalendarComponent} from './calendar/calendar.component';
 const approutes: Routes = [
+    // {path: '', component: LoginComponent},
     {path: '', component: LoginComponent},
     {path: 'register/student', component: RegisterComponent},
     {path: 'register/teacher', component: RegisterTeacherComponent},
