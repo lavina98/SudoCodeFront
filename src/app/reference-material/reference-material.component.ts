@@ -16,7 +16,7 @@ export class ReferenceMaterialComponent implements OnInit {
     this.refMaterial = new FormGroup({
       course: new FormControl(''),
       topic: new FormControl('', Validators.required),
-      desc: new FormControl(''),
+      description: new FormControl(''),
       link: new FormControl('')
     });
   }
