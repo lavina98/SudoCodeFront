@@ -17,5 +17,14 @@ export class AttendanceService {
                 return response;
             }));
      }
+     getAttendance(): Observable<any> {
+        const val = this.url + 'teacher/attendance';
+        return this.http.get(val).pipe(map(
+            (response) => {
+                console.log(response);
+                return response;
+            }
+        ));
+     }
 
 }

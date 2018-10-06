@@ -18,4 +18,13 @@ export class EventsService {
             }));
      }
 
+     getEvents(): Observable<any> {
+         const val = this.url + 'teacher/events';
+         return  this.http.get(val).pipe(map(
+            (response: any) => {
+                console.log(response);
+                return response;
+            }));
+     }
+
 }

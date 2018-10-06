@@ -29,6 +29,8 @@ import { CalendarHeaderComponent } from './calendar-header/calendar-header.compo
 import { EventsService } from './services/events.sevice';
 import { AttendanceService } from './services/attendance.service';
 import { EntryNavComponent } from './entry-nav/entry-nav.component';
+import { GetAttendanceComponent } from './get-attendance/get-attendance.component';
+import { GetEventsComponent } from './get-events/get-events.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +47,9 @@ import { EntryNavComponent } from './entry-nav/entry-nav.component';
     CalendarComponent,
     // CalendarMonthViewComponent,
     CalendarHeaderComponent,
-    EntryNavComponent
+    EntryNavComponent,
+    GetAttendanceComponent,
+    GetEventsComponent
   ],
   imports: [
     BrowserModule,
