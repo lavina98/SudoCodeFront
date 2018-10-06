@@ -1,23 +1,59 @@
 <app-teacher-nav>
 
 </app-teacher-nav>
-<br>
-<br>
-<br>
-<br>
+<!--<form [formGroup]="refMaterial" (ngSubmit)="onSubmit()">-->
+  <!--<label for="course">Enter course name</label>-->
+  <!--<input type="text" formControlName="course">-->
+  <!--<br>-->
+  <!--<label for="topic">Enter topic name</label>-->
+  <!--<input type="text" formControlName="topic">-->
+  <!--<br>-->
+  <!--<label for="desc">Enter Description</label>-->
+  <!--<input type="text" formControlName="desc">-->
+  <!--<br>-->
+  <!--<label for="topic">Enter reference material link</label>-->
+  <!--<input type="text" formControlName="link">-->
+  <!--<br>-->
+  <!--<button type="submit">Submit</button>-->
+<!--</form>-->
 
-<form [formGroup]="refMaterial" (ngSubmit)="onSubmit()">
-  <label for="course">Enter course name</label>
-  <input type="text" formControlName="course">
-  <br>
-  <label for="topic">Enter topic name</label>
-  <input type="text" formControlName="topic">
-  <br>
-  <label for="desc">Enter Description</label>
-  <input type="text" formControlName="desc">
-  <br>
-  <label for="topic">Enter reference material link</label>
-  <input type="text" formControlName="link">
-  <br>
-  <button type="submit">Submit</button>
-</form>
+<style>
+  label{
+    color: #2b359a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+  }
+</style>
+<div class="container" style="padding-left: 180px">
+  <form class="form-horizontal" [formGroup]="events" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="course">Event Course Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Eg: Advanced Data Structures" formControlName="course">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="topic">Event Course Topic</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Eg: Hashing" formControlName="topic" >
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="desc">Topic Details</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Eg: HashMaps and their applications" formControlName="desc" >
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="link">Reference Material Link</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Eg: https://www.cis.upenn.edu/~matuszek/cit594-2005/Lectures/16-sets-and-maps.ppt" formControlName="link" >
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" style="background-color: #2b359a;color: white">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
