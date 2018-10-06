@@ -10,7 +10,7 @@ export class EventsService {
     }
 
     createEvent(data: any): Observable<any> {
-        const val = this.url + 'teacher/event';
+        const val = this.url + 'teacher/events';
         return  this.http.post(val, data, {withCredentials: true}).pipe(map(
             (response: any) => {
                 console.log(response);
