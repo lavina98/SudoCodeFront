@@ -15,7 +15,7 @@ export class NotificationsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.notificationsService.getStudentGitDetails('lavina98').subscribe(
+    this.notificationsService.getStudentGitDetails().subscribe(
       (data: any) => {
         console.log(data);
         this.gitDetails = data;
