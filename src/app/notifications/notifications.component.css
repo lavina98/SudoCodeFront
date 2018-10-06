@@ -15,7 +15,7 @@ section {
   margin:  0.25rem;
   padding:  1rem;
   width:  100%;
-  background-color: #ffdb96;
+  background-color: #ff8e6c;
   border: 10px #5078af;
 }
 
@@ -25,8 +25,7 @@ section:nth-child(3n){
   border: 10px #5078af;
 }
 section:nth-child(2n){
-
-  background-color: #ff8e6c;
+  background-color: #ffdb96;;
   border: 10px #5078af;
 }
 p {
