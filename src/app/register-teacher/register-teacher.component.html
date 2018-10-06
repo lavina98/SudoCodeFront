@@ -70,14 +70,15 @@
       </div>
 
       <div class="wrap-input100 validate-input m-b-20">
-        <div class="row">
-          <div class="container-fluid">
-          <input class="input100 col-6" type="text" formControlName="collegeid" placeholder="College" disabled>
-          <select formControlName="collegeid" class="col-6">
+        <div align="left">
+          <input class="input100" type="text" formControlName="collegeid" placeholder="College" disabled>
+        </div>
+        <div align="center">
+          <select formControlName="collegeid" class="col-8">
             <option *ngFor="let c of coll" [value]="c">{{c}}</option>
           </select>
         </div>
-        </div>
+        <div><label><span>&nbsp;</span></label></div>
         <div *ngIf="register.value.collegeid ==='' && register.get('collegeid').touched === true">
 
           <label><span style="color: red;text-align: center">*College cannot be blank</span></label>
@@ -85,16 +86,16 @@
         <span class="focus-input100"></span>
       </div>
 
-
       <div class="wrap-input100 validate-input m-b-20">
-        <div class="row">
-          <div class="container-fluid">
+        <div align="left">
             <input class="input100 col-6" type="text" formControlName="departmentid" placeholder="Department" disabled>
-            <select formControlName="departmentid" class="col-6">
+        </div>
+        <div align="center">
+            <select formControlName="departmentid" class="col-8">
               <option *ngFor="let dep of depart" [value]="dep">{{dep}}</option>
             </select>
-          </div>
         </div>
+        <div><label><span>&nbsp;</span></label></div>
         <div *ngIf="register.value.deptartmentid ==='' && register.get('deptartmentid').touched === true">
 
           <label><span style="color: red;text-align: center">*Department cannot be blank</span></label>
