@@ -9,7 +9,7 @@ export class NotificationsService {
 
     }
     getStudentGitDetails(): Observable<any> {
-        const val = 'http://localhost:3500/scraping/github/';
+        const val = 'http://localhost:3500/scraping/github';
         return this.http.get(val, {withCredentials: true}).pipe(map(
             (res: any) => {
                 console.log(res);
