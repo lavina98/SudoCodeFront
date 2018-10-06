@@ -9,7 +9,7 @@ export class AuthService {
 
     }
     registerStudent(udata: any): Observable<any> {
-       return  this.http.post('https://localhost:3500/users/student-register', udata, {withCredentials: true}).pipe(map(
+       return  this.http.post('http://localhost:3500/users/student-register', udata, {withCredentials: true}).pipe(map(
            (response: any) => {
                console.log(response);
                return response;
@@ -17,7 +17,7 @@ export class AuthService {
     }
 
     registerTeacher(data: any): Observable<any> {
-        return  this.http.post('https://localhost:3500/users/teacher-register', data, {withCredentials: true}).pipe(map(
+        return  this.http.post('http://localhost:3500/users/teacher-register', data, {withCredentials: true}).pipe(map(
             (response: any) => {
                 console.log(response);
                 return response;
@@ -25,7 +25,7 @@ export class AuthService {
     }
 
     registerCollege(data: any): Observable<any> {
-        return  this.http.post('https://localhost:3500/users/college-register', data, {withCredentials: true}).pipe(map(
+        return  this.http.post('http://localhost:3500/users/college-register', data, {withCredentials: true}).pipe(map(
             (response: any) => {
                 console.log(response);
                 return response;
@@ -33,7 +33,7 @@ export class AuthService {
 
     }
     loginUser(udata: any): Observable<any> {
-        return this.http.post('', udata).pipe(map(
+        return this.http.post('http://localhost:3500/users/login', udata).pipe(map(
             (res: any) => {
                  console.log(res);
                  return res;

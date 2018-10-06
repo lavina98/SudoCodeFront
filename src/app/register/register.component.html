@@ -59,9 +59,12 @@
       </div>
 
       <div class="wrap-input100 validate-input m-b-20">
-        <input class="input100" type="text" formControlName="deptartmentid" placeholder="Enter department">
+        <input class="input100" type="text" formControlName="departmentid" placeholder="Enter department">
         <span class="focus-input100"></span>
-        <div *ngIf="register.value.deptartmentid ==='' && register.get('deptartmentid').touched === true">
+        <select formControlName="departmentid" class="col-6">
+            <option *ngFor="let item of depart" [value]="item"> {{item}}</option>
+          </select>
+        <div *ngIf="register.value.departtmentid ==='' && register.get('departmentid').touched === true">
 
           <label><span style="color: red;text-align: center">*Department cannot be blank</span></label>
           </div>

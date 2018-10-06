@@ -1,13 +1,19 @@
-Github Details :
+<h2>Github Details :</h2>
 <p>Followers :{{gitDetails?.result.Followers}}</p>
 <p>Following :{{gitDetails?.result.Following}}</p>
 <p>Overview :{{gitDetails?.result.Overview}}</p>
 <p>Repositories :{{gitDetails?.result.Repositories}}</p>
 <p>Stars :{{gitDetails?.result.Stars}}</p>
 
-Internship Details:
+<h2>Hackathon Details:</h2>
+<div *ngFor="let item of hackathonDetails">
+    <label>{{item.name}} :</label>
+    <a [href]="item.link">GO to link</a>
+    <br>
+</div>
+<h2>Internship Details:</h2>
 <div *ngFor="let item of internDetails">
     <label>{{item.name}} :</label>
-    <label>{{item.link}}</label>
+    <a [href]="item.link">GO to link</a>
     <br>
 </div>
