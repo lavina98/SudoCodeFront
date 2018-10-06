@@ -1,16 +1,51 @@
 <app-teacher-nav>
 
 </app-teacher-nav>
-<br><br><br><br>
-<form [formGroup]="events" (ngSubmit)="onSubmit()">
+<!--<br><br><br><br>-->
+<!--<form [formGroup]="events" (ngSubmit)="onSubmit()">-->
 
-    <label for="name">Enter name: </label>
-    <input formControlName="name" type="text">
-    <br>
-    <label for="desc">Enter Description:</label>
-    <input formControlName="desc" type="text">
-    <br>
-    <label for="date">Enter Date: </label>
-    <input type="date" formControlName="date">
-  <button type="submit">Submit</button>
+    <!--<label for="name">Enter name: </label>-->
+    <!--<input formControlName="name" type="text">-->
+    <!--<br>-->
+    <!--<label for="desc">Enter Description:</label>-->
+    <!--<input formControlName="desc" type="text">-->
+    <!--<br>-->
+    <!--<label for="date">Enter Date: </label>-->
+    <!--<input type="date" formControlName="date">-->
+  <!--<button type="submit">Submit</button>-->
+  <!--</form>-->
+<style>
+  label{
+    color: #2b359a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+  }
+</style>
+<div class="container">
+  <form class="form-horizontal" [formGroup]="events" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="name">Event Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Eg: ADS ISE-II" formControlName="name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="desc">Event Description</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="20 marks - online mcq test" formControlName="desc" >
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="date">Event Date</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" formControlName="date">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" style="background-color: #2b359a;color: white">Submit</button>
+      </div>
+    </div>
   </form>
+</div>
+
