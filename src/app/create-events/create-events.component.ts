@@ -15,7 +15,8 @@ export class CreateEventsComponent implements OnInit {
     this.events = new FormGroup({
       name: new FormControl('', Validators.required),
       desc: new FormControl('' , Validators.required),
-      date: new FormControl('', Validators.required)
+      date: new FormControl('', Validators.required),
+      course: new FormControl('', Validators.required)
     });
   }
 
@@ -31,7 +32,7 @@ export class CreateEventsComponent implements OnInit {
           end_day: arr[2],
           end_month: arr[1],
           end_year: arr [0],
-          email: "abc@abc.com"
+          course: this.events.value.course
         };
         console.log(val);
         this.eventsService.createEvent(val).subscribe(
