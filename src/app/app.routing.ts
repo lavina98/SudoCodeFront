@@ -10,6 +10,7 @@ import { RegistercollegeComponent } from './registercollege/registercollege.comp
 import { ReferenceMaterialComponent } from './reference-material/reference-material.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { GetAttendanceComponent } from './get-attendance/get-attendance.component';
+import { ProfileComponent } from './profile/profile.component';
 const approutes: Routes = [
     {path: '', component: LoginComponent},
     {path: 'register/student', component: RegisterComponent},
@@ -20,7 +21,8 @@ const approutes: Routes = [
     {path: 'teacher/createevents', component: CreateEventsComponent},
     {path: 'student/notification', component: NotificationsComponent},
     {path: 'student/attendance', component: GetAttendanceComponent},
-    {path: 'student/events', component: GetEventsComponent}
+    {path: 'student/events', component: GetEventsComponent},
+    {path: 'student/profile', component: ProfileComponent},
 ];
 @NgModule({
 
