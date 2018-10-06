@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { RegistercollegeComponent } from './registercollege/registercollege.component';
 import { ReferenceMaterialComponent } from './reference-material/reference-material.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 const approutes: Routes = [
     {path: '', component: LoginComponent},
     {path: 'register/student', component: RegisterComponent},
@@ -14,7 +15,8 @@ const approutes: Routes = [
     {path: 'register/college', component: RegistercollegeComponent},
     {path: 'teacher/attendance', component: UpdateAttendanceComponent},
     {path: 'teacher/referencematerial', component: ReferenceMaterialComponent},
-    {path: 'teacher/createevents', component: CreateEventsComponent}
+    {path: 'teacher/createevents', component: CreateEventsComponent},
+    {path: 'student/notification', component: NotificationsComponent}
 ];
 @NgModule({
 
