@@ -9,6 +9,7 @@ import { NotificationsService } from '../services/notifications.service';
 export class NotificationsComponent implements OnInit {
 
   gitDetails: any;
+  hackathonDetails: any;
   internDetails: any;
   constructor(private notificationsService: NotificationsService) { }
 
@@ -28,6 +29,14 @@ export class NotificationsComponent implements OnInit {
         this.internDetails = data;
         console.log('in notif comp');
         console.log(this.internDetails);
+      }
+    );
+
+    this.notificationsService.getHackathonDetails().subscribe(
+      (data: any) => {
+        console.log(data);
+        this.hackathonDetails = data;
+        console.log(this.hackathonDetails);
       }
     );
 

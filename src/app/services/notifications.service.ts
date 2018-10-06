@@ -24,6 +24,15 @@ export class NotificationsService {
                 console.log(data);
                 return data;
             }
-        ))
+        ));
+    }
+
+    getHackathonDetails(): Observable<any> {
+        return this.http.get('http://localhost:3500/scraping/hackathons').pipe(map(
+            (data) => {
+                console.log(data);
+                return data;
+            }
+        ));
     }
 }
