@@ -18,7 +18,7 @@ section {
   text-transform: uppercase;
 }
 #tabs{
-  background: #9ea8e5;
+  background:linear-gradient(to right,#66ffe0,#9ea8e5);
   color: #eee;
 }
 #tabs h6.section-title{
