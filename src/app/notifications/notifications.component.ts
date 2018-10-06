@@ -25,12 +25,9 @@ export class NotificationsComponent implements OnInit {
     this.notificationsService.getInternshipDetails().subscribe(
       (data: any) => {
         console.log(data);
-        this.internDetails = data.result;
-        for (let i = 0 ; i < data.result.length ; i++) {
-            console.log('in loop');
-            console.log(i);
-        }
-
+        this.internDetails = data;
+        console.log('in notif comp');
+        console.log(this.internDetails);
       }
     );
 

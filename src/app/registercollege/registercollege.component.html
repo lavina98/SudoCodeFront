@@ -13,11 +13,5 @@
     <div>
         <button type="button" (click)="add()">Add a new Link</button>
     </div>
-    <div formArrayName="addon">
-      <div *ngFor=" let item of registerCollege.get('addon').controls ; let i=index">
-        <label> Add the new link addr</label>
-        <input type="text" [formControlName]="i">
-      </div>
-    </div>
     <button type="submit">Submit Form</button>
 </form>
