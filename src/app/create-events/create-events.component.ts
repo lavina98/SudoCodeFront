@@ -30,7 +30,9 @@ export class CreateEventsComponent implements OnInit {
           start_year: 0,
           end_day: arr[2],
           end_month: arr[1],
-          end_year: arr [0]};
+          end_year: arr [0],
+          email: "abc@abc.com"
+        };
         console.log(val);
         this.eventsService.createEvent(val).subscribe(
           (data: any) => console.log(data)

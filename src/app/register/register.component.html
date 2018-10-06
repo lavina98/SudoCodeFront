@@ -64,7 +64,7 @@
         <select formControlName="departmentid" class="col-6">
             <option *ngFor="let item of depart" [value]="item"> {{item}}</option>
           </select>
-        <div *ngIf="register.value.departtmentid ==='' && register.get('departmentid').touched === true">
+        <div *ngIf="register.value.departmentid ==='' && register.get('departmentid').touched === true">
 
           <label><span style="color: red;text-align: center">*Department cannot be blank</span></label>
           </div>
